@@ -1,0 +1,40 @@
+﻿@using CurrencyApp.Web.Models.Converter
+@{
+    ViewData["Title"] = "Converter Page";
+}
+
+@model ConverterViewModel
+<div class="container-principal">
+
+    <h1>Conversor de divisas</h1>
+    <form asp-controller="Management" asp-action="ConvertAmount" method="post">
+        <section class="section">
+            <p>Divisa principal: <strong>@(Model.CurrencyPrincipal is null ? "Es necesario seleccionar una divisa principal." : Model.CurrencyPrincipal)</strong></p>
+            @if (!string.IsNullOrEmpty(Model.CurrencyPrincipal))
+            {
+                <h3>Monto</h3>
+                <input asp-for="Amount" class="inputForm" type="number" />
+                <span class="text-danger" asp-validation-for="Amount"></span>
+                <h3>Seleccionar una fecha</h3>
+                <input max="@Model.Date.Value.ToString("yyyy-MM-dd")" asp-for="Date" class="inputForm" type="date" />
+                <span class="text-danger" asp-validation-for="Date"></span>
+                <div class="btn-group">
+                    <button>Convertir</button>
+                </div>
+            }
+        </section>
+    </form>
+    @if (Model.Result is not null && Model.Result.Any())
+    {
+        <div class="dashboard-items">
+            @foreach (var rate in Model.Result)
+            {
+                <div class="dashboard-item-rates">
+                    <p>Divisa: <strong id="selectedMain">@rate.Name</strong></p>
+                    <p>Conversión: <strong id="selectedMain">@rate.Amount</strong></p>
+                </div>
+            }
+        </div>
+    }
+</div>
+

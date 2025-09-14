@@ -1,0 +1,38 @@
+﻿@using CurrencyApp.Web.Models.Calendar
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+@model DataCalendarViewModel
+
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+<div class="container-principal dashboard mb-1 mt-1">
+
+    <h1>Divisa principal</h1>
+
+    <div class="dashboard-item">
+        <p>Divisa principal: <strong>@(string.IsNullOrEmpty(Model.Base) ? "Es necesario seleccionar una divisa principal." : Model.Base)</strong></p>
+        <p>Fecha: <strong>@Model.Date</strong></p>
+    </div>
+
+    <h1>Divisa(s) favorita(s)</h1>
+
+    <div class="dashboard-items">
+        @if (Model.Rates is not null)
+        {
+            @foreach (var rate in Model.Rates)
+            {
+                <div class="dashboard-item-rates">
+                    <p>Divisa: <strong>@rate.Key</strong></p>
+                    <p>Conversión: <strong>@rate.Value</strong></p>
+                </div>
+            }
+        }
+    </div>
+</div>

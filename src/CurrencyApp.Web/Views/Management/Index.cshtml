@@ -1,0 +1,49 @@
+﻿@using CurrencyApp.Web.Models.Management
+@{
+    ViewData["Title"] = "Management Page";
+}
+
+@model ManagementViewModel
+
+<div class="container-principal">
+    <h1>Gestión de divisas</h1>
+
+    <form asp-controller="Management" asp-action="ChangeCurrency" method="post">
+        <section class="section">
+            <h3>Seleccionar divisa principal</h3>
+            <select asp-for="SelectedCurrencyPrincipal" asp-items="@Model.CurrenciesPrincipal"></select>
+            @if (!string.IsNullOrEmpty(Model.SelectedCurrencyPrincipal))
+            {
+                <p>Divisa principal: <strong id="selectedMain">@Model.SelectedCurrencyPrincipal</strong></p>
+            }
+            <div class="btn-group">
+                <button>Seleccionar</button>
+            </div>
+        </section>
+    </form>
+    <form asp-controller="Management" asp-action="ModifyCurrencyFavorite" method="post">
+        <section class="section">
+            <h3>Divisas favoritas</h3>
+            <select asp-for="SelectedCurrencyFavorite" asp-items="@Model.CurrenciesFavorite"></select>
+            <div class="btn-group">
+                <button name="action" value="add">+ Agregar</button>
+                <button name="action" value="remove">- Remover</button>
+            </div>
+            <ul id="favorites" class="favorites">
+                @if (Model.CurrenciesFavorites != null)
+                {
+                    foreach (var currency in Model.CurrenciesFavorites)
+                    {
+                        <li><input asp-for="SelectedCurrenciesDelete" value="@currency.Base" type="radio" /> @currency.Base - @currency.Name</li>
+                    }
+                }
+            </ul>
+        </section>
+    </form>
+
+</div>
+
+
+
+
+

@@ -1,0 +1,166 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #ccc
+}
+
+
+
+/*Css Managament*/
+
+p{
+    color:white;
+}
+
+.container-principal {
+    max-width: 700px;
+    margin: 50px auto;
+    background: #1d3557;
+    border-radius: 7px;
+    padding: 20px 50px;
+}
+
+.dashboard{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    max-width:1200px;
+    align-items:center;
+}
+
+.dashboard-item {
+    text-align: center;
+    color: white;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    padding: 10px;
+    width: 600px;
+}
+
+.dashboard-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    grid-column-gap:10px;
+}
+
+.dashboard-item-rates {
+    color: white;
+    border-top: 2px solid #ccc;
+    padding: 10px;
+    width: 170px;
+    border-radius:3px;
+}
+
+
+#calendar {
+    background: #1d3557;
+    color:white;
+    padding: 10px;
+    border-radius: 8px;
+    width: 620px;
+    padding: 10px;
+}
+
+.fc-daygrid-day-number {
+    color: white !important;
+}
+
+.fc-col-header-cell-cushion {
+    color: white !important; /* Nombres de los días (Lun, Mar, etc.) */
+}
+
+.fc-toolbar-title {
+    color: white !important; /* Título del mes */
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #a8dadc;
+}
+
+.section {
+    margin-bottom: 40px;
+    color:white;
+}
+
+h3 {
+    font-size: 1em;
+    color: #f1faee;
+    margin-bottom: 5px;
+    margin-top:9px;
+}
+
+select, .inputForm {
+    width: 100%;
+    padding: 8px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border-radius: 2px;
+    border: none;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top:20px;
+}
+
+button {
+    flex: 1;
+    padding: 10px;
+    background-color: #C72A37;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+    button:hover {
+        background-color: #ff6b6b;
+    }
+
+favorites ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+favorites ul li {
+    background-color: #457b9d;
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    border-radius: 6px;
+}
+
+.favorites li{
+
+    margin-top:15px;
+    list-style-type:none;
+
+}
+
+/*Css Managament*/

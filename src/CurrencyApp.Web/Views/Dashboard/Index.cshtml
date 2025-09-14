@@ -1,0 +1,32 @@
+﻿@using CurrencyApp.Web.Models.Dashboard
+@{
+    ViewData["Title"] = "Dashboard Page";
+}
+
+@model DashboardViewModel
+
+<div class="container-principal dashboard">
+   
+    <h1>Divisa principal</h1>
+
+    <div class="dashboard-item">
+        <p>Divisa principal: <strong>@(string.IsNullOrEmpty(Model.Base) ? "Es necesario seleccionar una divisa principal." : Model.Base)</strong></p>
+        <p>Conversión: <strong>@Model.Amount</strong></p>
+        <p>Fecha: <strong>@Model.Date</strong></p>
+    </div>
+
+    <h1>Divisa(s) favorita(s)</h1>
+
+    <div class="dashboard-items">
+        @if(Model.Rates is not null)
+        { 
+            @foreach (var rate in Model.Rates)
+            {
+                <div class="dashboard-item-rates">
+                    <p>Divisa: <strong>@rate.Base</strong></p>
+                    <p>Conversión: <strong>@rate.Amount</strong></p>
+                </div>
+            }        
+        }
+    </div>
+</div>
