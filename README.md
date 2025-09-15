@@ -31,3 +31,23 @@ dotnet ef database update Initial -p .\CurrencyApp.Infrastructure\ -s .\Currency
 🔹 Si usarás la migración Initial existente
 
 dotnet ef database update Initial -p .\CurrencyApp.Infrastructure\ -s .\CurrencyApp.Web\
+
+🔹 Si quieres ejecutar los scripts de la bd directamente
+
+CurrencyApp\src\CurrencyApp.Infrastructure\Scipts\Init.sql
+
+Imagenes:
+
+![cap1](https://github.com/AlfredoSV/CurrencyApp/imagesApp/one.PNG)
+
+
+![cap2](https://github.com/AlfredoSV/CurrencyApp/imagesApp/two.PNG)
+
+
+![cap3](https://github.com/AlfredoSV/CurrencyApp/imagesApp/three.PNG)
+
+
+![cap4](https://github.com/AlfredoSV/CurrencyApp/imagesApp/four.PNG)
+
+
+![cap5](https://github.com/AlfredoSV/CurrencyApp/imagesApp/five.PNG)
