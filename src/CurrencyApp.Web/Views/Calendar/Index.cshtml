@@ -10,8 +10,8 @@
             <div class="modal-content">
                 <div id="modalBody" class="modal-body">
                 </div>
-                <div class="btn-group m-3 mb-1 mt-1">
-                    <button type="button" data-bs-dismiss="modal">Cerrar</button>
+                <div class="btn-group m-5 mb-2 mt-1">
+                    <button type="button" class="m-3 mt-0 mb-0" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
@@ -23,14 +23,12 @@
         document.addEventListener('DOMContentLoaded', function () {
             let calendarEl = document.getElementById('calendar');
                 let today = new Date();
-                let yesterday = new Date(today);
-                yesterday.setDate(today.getDate() - 1);
             let calendar = new FullCalendar.Calendar(calendarEl, {
                 initialView: 'dayGridMonth',
                 locale: 'es',
                 selectable: true,
                 validRange:{
-                    end:yesterday.toISOString()
+                    end:today.toISOString()
                 },
                 buttonText: {
                     today: 'Hoy',

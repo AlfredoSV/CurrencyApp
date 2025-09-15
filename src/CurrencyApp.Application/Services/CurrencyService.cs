@@ -144,7 +144,7 @@ namespace CurrencyApp.Application.Services
 
                 string type = TypeCurrency.Favorite.ToString();
                 IEnumerable<string> favoritesCurrenciesList = _currencyRepository.GetAllByType(type).Select(dt => dt.Base);
-                string url = BuildUrl(new DataFilterApi() { BaseCurrency = principalCurrency.Base, FavoritesCurrencies = favoritesCurrenciesList, Amount = amount, StartDate = date });
+                string url = BuildUrl(new DataFilterApi() { BaseCurrency = principalCurrency.Base, FavoritesCurrencies = favoritesCurrenciesList, Amount = amount, Date = date });
                 httpResponseMessage = await this._httpClient.GetAsync(url);
                 httpResponseMessage.EnsureSuccessStatusCode();
                 data = await httpResponseMessage.Content.ReadFromJsonAsync<CurrencyRates>() ?? new CurrencyRates();
@@ -201,9 +201,9 @@ namespace CurrencyApp.Application.Services
         //https://api.frankfurter.dev/v1/2025-01-02..2025-01-03?base=USD&symbols=MXN
         private string BuildUrl(DataFilterApi dataFilterApi)
         {
+            string format = "yyyy-MM-dd";
             StringBuilder complementUrl = new StringBuilder();
-            complementUrl.Append(dataFilterApi.StartDate is null ? "latest" : ((DateTime)dataFilterApi.StartDate).ToString("yyyy-MM-dd"));
-            complementUrl.Append(dataFilterApi.EndDate is null ? string.Empty : $"..{((DateTime)dataFilterApi.EndDate).ToString("yyyy-MM-dd")}");
+            complementUrl.Append(dataFilterApi.Date is null ? "latest" : ((DateTime)dataFilterApi.Date).ToString(format));
             complementUrl.Append(dataFilterApi.Amount is null ? "?" : $"?amount={dataFilterApi.Amount}&");
             complementUrl.Append($"base={dataFilterApi.BaseCurrency}");
             complementUrl.Append(dataFilterApi.FavoritesCurrencies.Any() ? $"&symbols={string.Join(",", dataFilterApi.FavoritesCurrencies)}" : string.Empty);

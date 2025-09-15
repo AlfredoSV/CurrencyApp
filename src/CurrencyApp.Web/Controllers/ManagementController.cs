@@ -82,7 +82,7 @@ public class ManagementController : Controller
 
         if (principalCurrency is null)
         {
-            return View(model);
+            return View("Converter", new ConverterViewModel());
         }
 
         model.CurrencyPrincipal = string.Concat(principalCurrency.Base, "-", principalCurrency.Description);

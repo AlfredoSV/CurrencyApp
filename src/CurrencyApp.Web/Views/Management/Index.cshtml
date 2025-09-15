@@ -9,7 +9,7 @@
 
     <form asp-controller="Management" asp-action="ChangeCurrency" method="post">
         <section class="section">
-            <h3>Seleccionar divisa principal</h3>
+            <h3>Divisa principal</h3>
             <select asp-for="SelectedCurrencyPrincipal" asp-items="@Model.CurrenciesPrincipal"></select>
             @if (!string.IsNullOrEmpty(Model.SelectedCurrencyPrincipal))
             {
@@ -22,7 +22,7 @@
     </form>
     <form asp-controller="Management" asp-action="ModifyCurrencyFavorite" method="post">
         <section class="section">
-            <h3>Divisas favoritas</h3>
+            <h3>Divisa(s) favorita(s)</h3>
             <select asp-for="SelectedCurrencyFavorite" asp-items="@Model.CurrenciesFavorite"></select>
             <div class="btn-group">
                 <button name="action" value="add">+ Agregar</button>

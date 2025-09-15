@@ -7,7 +7,7 @@ namespace CurrencyApp.Web.Models.Converter
         public ConverterViewModel()
         {
             this.Amount = 1;
-            this.Date = DateTime.Now.AddDays(-1);
+            this.Date = DateTime.Now;
             this.Result = new List<ResultConverViewModel>();
         }
         public string? CurrencyPrincipal { get; set; }

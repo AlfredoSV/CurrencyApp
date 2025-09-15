@@ -14,7 +14,7 @@
                 <h3>Monto</h3>
                 <input asp-for="Amount" class="inputForm" type="number" />
                 <span class="text-danger" asp-validation-for="Amount"></span>
-                <h3>Seleccionar una fecha</h3>
+                <h3>Fecha</h3>
                 <input max="@Model.Date.Value.ToString("yyyy-MM-dd")" asp-for="Date" class="inputForm" type="date" />
                 <span class="text-danger" asp-validation-for="Date"></span>
                 <div class="btn-group">
