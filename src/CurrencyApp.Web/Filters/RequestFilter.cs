@@ -1,7 +1,6 @@
 ﻿using CurrencyApp.Application.IServices;
 using CurrencyApp.Domain.Entities;
 using Microsoft.AspNetCore.Mvc.Filters;
-using System.Text;
 using System.Text.Json;
 
 namespace CurrencyApp.Web.Filters

@@ -15,7 +15,7 @@ public class DashboardController : Controller
     }
 
     [RequestFilter]
-    [HttpGet]
+    [HttpGet("dashboard")]
     public async Task<IActionResult> Index()
     {
         DashboardViewModel dataResponse = new DashboardViewModel();

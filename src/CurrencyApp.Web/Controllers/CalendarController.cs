@@ -15,7 +15,7 @@ namespace CurrencyApp.Web.Controllers
         {
             _currencyService = currencyService;
         }
-
+        [HttpGet("calendar")]
         public IActionResult Index()
         {
             return View();

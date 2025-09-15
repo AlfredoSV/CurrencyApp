@@ -37,7 +37,6 @@ public class ManagementController : Controller
     public async Task<IActionResult> ModifyCurrencyFavorite([FromForm] ManagementViewModel model, [FromForm] string action)
     {
         await _currencyService.ModifyCurrenciesFavorites(model.SelectedCurrencyFavorite, model.SelectedCurrenciesDelete, action);
-
         return RedirectToAction("Index");
     }
 
@@ -48,10 +47,10 @@ public class ManagementController : Controller
 
         BuildDataManagement? buildDataManagement = await _currencyService.GetBuildDataManagement();
 
-        if (buildDataManagement.principalCurrency is not null)
-            managementViewModel.SelectedCurrencyPrincipal = $"{buildDataManagement.principalCurrency.Base}-{buildDataManagement.principalCurrency.Description}";
+        if (buildDataManagement?.principalCurrency is not null)
+            managementViewModel.SelectedCurrencyPrincipal = string.Concat(buildDataManagement.principalCurrency.Base,"-",buildDataManagement.principalCurrency.Description);
 
-        managementViewModel.CurrenciesFavorites = buildDataManagement.favoriteCurrency.Select(data =>
+        managementViewModel.CurrenciesFavorites = buildDataManagement?.favoriteCurrency.Select(data =>
         {
             return new CurrencyViewModel { Base = data.Base, Name = data.Description };
         });
@@ -62,7 +61,7 @@ public class ManagementController : Controller
         return View(managementViewModel);
     }
 
-    [HttpGet]
+    [HttpGet("converter")]
     public async Task<IActionResult> Converter()
     {
         ConverterViewModel converterViewModel = new();
@@ -86,7 +85,7 @@ public class ManagementController : Controller
             return View(model);
         }
 
-        model.CurrencyPrincipal = $"{principalCurrency.Base}-{principalCurrency.Description}";
+        model.CurrencyPrincipal = string.Concat(principalCurrency.Base, "-", principalCurrency.Description);
 
         if (!ModelState.IsValid)
         {

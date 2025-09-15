@@ -1,13 +1,7 @@
 ﻿using CurrencyApp.Domain.Entities;
 using CurrencyApp.Domain.IRepositories;
 using CurrencyApp.Infrastructure.Data;
-using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CurrencyApp.Infrastructure.Repositories
 {
@@ -23,9 +17,6 @@ namespace CurrencyApp.Infrastructure.Repositories
         public async Task<IEnumerable<Currency>> GetAllAsync()
             => await _context.Currencies.ToListAsync();
 
-        public async Task<Currency?> GetByIdAsync(int id)
-            => await _context.Currencies.FirstOrDefaultAsync(c => c.Id == id);
-
         public async Task<Currency?> GetByBaseAsync(string baseCurrency)
             => await _context.Currencies.FirstOrDefaultAsync(c => c.Base == baseCurrency);
 
@@ -36,13 +27,6 @@ namespace CurrencyApp.Infrastructure.Repositories
         {
             _context.Currencies.Update(currency);
             return Task.CompletedTask;
-        }
-
-        public async Task RemoveAsync(int id)
-        {
-            var entity = await GetByIdAsync(id);
-            if (entity != null)
-                _context.Currencies.Remove(entity);
         }
 
         public async Task RemoveAsync(string baseCurrency)

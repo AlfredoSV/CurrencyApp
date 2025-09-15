@@ -11,8 +11,6 @@ namespace CurrencyApp.Application.IServices
 
         Task<CurrencyRates?> GetDataApi(decimal? amount = null, DateTime? date = null);
 
-        //Task<RatesRange?> GetDataHistorial(DateTime? date);
-
         Task<Currency?> GetPrincipalCurrency();
 
         Task AddCurrencyFavorite(string baseCurrency, string description);
