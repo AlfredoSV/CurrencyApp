@@ -38,16 +38,16 @@ CurrencyApp\src\CurrencyApp.Infrastructure\Scipts\Init.sql
 
 Imagenes:
 
-![cap1](https://github.com/AlfredoSV/CurrencyApp/imagesApp/one.PNG)
+![cap1](https://github.com/AlfredoSV/CurrencyApp/blob/master/imagesApp/one.PNG)
 
 
-![cap2](https://github.com/AlfredoSV/CurrencyApp/imagesApp/two.PNG)
+![cap2](https://github.com/AlfredoSV/CurrencyApp/blob/master/imagesApp/two.PNG)
 
 
-![cap3](https://github.com/AlfredoSV/CurrencyApp/imagesApp/three.PNG)
+![cap3](https://github.com/AlfredoSV/CurrencyApp/blob/master/imagesApp/three.PNG)
 
 
-![cap4](https://github.com/AlfredoSV/CurrencyApp/imagesApp/four.PNG)
+![cap4](https://github.com/AlfredoSV/CurrencyApp/blob/master/imagesApp/four.PNG)
 
 
-![cap5](https://github.com/AlfredoSV/CurrencyApp/imagesApp/five.PNG)
+![cap5](https://github.com/AlfredoSV/CurrencyApp/blob/master/imagesApp/five.PNG)
