@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyApp.Domain", "src\C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyApp.Application", "src\CurrencyApp.Application\CurrencyApp.Application.csproj", "{1FB08D0D-372A-404F-89FA-DC45DF2F44A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyApp.Infrastructure", "src\CurrencyApp.Infrastructure\CurrencyApp.Infrastructure.csproj", "{F510AB40-407C-4C19-A468-6BCD841ADC27}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyApp.Infrastructure", "src\CurrencyApp.Infrastructure\CurrencyApp.Infrastructure.csproj", "{F9C0F5D6-EAE4-C4DD-5DAE-1DEC20C4004B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{1FB08D0D-372A-404F-89FA-DC45DF2F44A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FB08D0D-372A-404F-89FA-DC45DF2F44A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1FB08D0D-372A-404F-89FA-DC45DF2F44A1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F510AB40-407C-4C19-A468-6BCD841ADC27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F510AB40-407C-4C19-A468-6BCD841ADC27}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F510AB40-407C-4C19-A468-6BCD841ADC27}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F510AB40-407C-4C19-A468-6BCD841ADC27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9C0F5D6-EAE4-C4DD-5DAE-1DEC20C4004B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9C0F5D6-EAE4-C4DD-5DAE-1DEC20C4004B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9C0F5D6-EAE4-C4DD-5DAE-1DEC20C4004B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9C0F5D6-EAE4-C4DD-5DAE-1DEC20C4004B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

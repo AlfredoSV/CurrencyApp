@@ -9,7 +9,7 @@ namespace CurrencyApp.Domain.Entities
         [NotNull]
         public Guid Id { get; set; }
         [NotNull]
-        public DateTime CreateAt { get; set; }
+        public DateTime CreatedAt { get; set; }
         [NotNull]
         public string Message { get; set; }
         [NotNull]
@@ -26,7 +26,7 @@ namespace CurrencyApp.Domain.Entities
             StackTrace = exception.StackTrace;
             Source = exception.Source;
             Id = Guid.NewGuid();
-            CreateAt = DateTime.Now;
+            CreatedAt = DateTime.Now;
         }
 
         public static LogBook Create(Exception exception)

@@ -24,7 +24,7 @@ body {
 
 
 
-/*Css Managament*/
+/*Css App*/
 
 p{
     color:white;
@@ -84,11 +84,11 @@ p{
 }
 
 .fc-col-header-cell-cushion {
-    color: white !important; /* Nombres de los días (Lun, Mar, etc.) */
+    color: white !important;
 }
 
 .fc-toolbar-title {
-    color: white !important; /* Título del mes */
+    color: white !important;
 }
 
 h1 {
@@ -162,4 +162,3 @@ favorites ul li {
 
 }
 
-/*Css Managament*/

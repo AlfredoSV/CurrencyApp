@@ -27,7 +27,7 @@ public class RequestFilterLog
     public string Path { get; set; }
 
     [NotNull]
-    public DateTime CreateAt { get; set; }
+    public DateTime CreatedAt { get; set; }
 
     [NotNull]
     public string ContentType { get; set; }
@@ -46,7 +46,7 @@ public class RequestFilterLog
         Protocol = protocol;
         Host = host;
         Path = path;
-        CreateAt = DateTime.Now;
+        CreatedAt = DateTime.Now;
         ContentType = contentType;
         Data = data;
     }

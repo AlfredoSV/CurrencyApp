@@ -180,13 +180,13 @@ namespace CurrencyApp.Application.Services
         {
             try
             {
-                if (action.Equals(action) && !string.IsNullOrEmpty(selectedCurrencyFavorite))
+                if (action.Equals("add") && !string.IsNullOrEmpty(selectedCurrencyFavorite))
                 {
                     string[] values = selectedCurrencyFavorite?.Split('-')!;
                     await AddCurrencyFavorite(values[0], values[1]);
                 }
 
-                if (action.Equals(action) && !string.IsNullOrEmpty(selectedCurrenciesDelete))
+                if (action.Equals("remove") && !string.IsNullOrEmpty(selectedCurrenciesDelete))
                 {
                     await RemoveAsync(selectedCurrenciesDelete ?? string.Empty);
                 }
